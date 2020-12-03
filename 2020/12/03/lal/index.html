@@ -5,12 +5,12 @@
   
 
   
-  <title>Hexo</title>
+  <title>线段树 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="线段树一.概念（构建）线段树是一种基于二分思想的完全二叉树，用于维护一段数据或数组，并且使得所有操作的时间复杂度尽量维持在O(nlogn)。对于未安排数据的节点都选择默认为0，且每一个节点存储的值都是左右孩子进行一些操作的结果（叶节点除外）。 1.代码实现其实可以直接以数组实现，但为了实现再存储原数组左右区间的值，就使用结构体实现线段树 123456789101112131415161718192">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2020/11/30/lal/index.html">
+<meta property="og:title" content="线段树">
+<meta property="og:url" content="http://example.com/2020/12/03/lal/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="线段树一.概念（构建）线段树是一种基于二分思想的完全二叉树，用于维护一段数据或数组，并且使得所有操作的时间复杂度尽量维持在O(nlogn)。对于未安排数据的节点都选择默认为0，且每一个节点存储的值都是左右孩子进行一些操作的结果（叶节点除外）。 1.代码实现其实可以直接以数组实现，但为了实现再存储原数组左右区间的值，就使用结构体实现线段树 123456789101112131415161718192">
 <meta property="og:locale" content="en_US">
@@ -18,8 +18,8 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200710184634664.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIwMzcwNA==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200714140248425.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200714152504581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIwMzcwNA==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-11-30T09:08:30.169Z">
-<meta property="article:modified_time" content="2020-11-30T09:08:04.225Z">
+<meta property="article:published_time" content="2020-12-03T13:30:40.000Z">
+<meta property="article:modified_time" content="2020-12-03T13:32:07.896Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200710181807150.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIwMzcwNA==,size_16,color_FFFFFF,t_70">
@@ -73,13 +73,23 @@
       <div class="outer">
         <section id="main"><article id="post-lal" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/30/lal/" class="article-date">
-  <time datetime="2020-11-30T09:08:30.169Z" itemprop="datePublished">2020-11-30</time>
+    <a href="/2020/12/03/lal/" class="article-date">
+  <time datetime="2020-12-03T13:30:40.000Z" itemprop="datePublished">2020-12-03</time>
 </a>
     
   </div>
   <div class="article-inner">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      线段树
+    </h1>
+  
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -110,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/30/lal/" data-id="cki4c2bc40000bgt948uedqt8" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/12/03/lal/" data-id="cki8w1fxp0001ugt9ey2i6fb2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -118,6 +128,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/12/03/first/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          first
+        
+      </div>
+    </a>
   
   
     <a href="/2020/11/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -146,7 +165,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -159,7 +178,11 @@
       <ul>
         
           <li>
-            <a href="/2020/11/30/lal/">(no title)</a>
+            <a href="/2020/12/03/first/">first</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/03/lal/">线段树</a>
           </li>
         
           <li>
